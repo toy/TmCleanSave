@@ -30,13 +30,13 @@
 - (void)installMenuItem{
 	if (fileMenu = [[[[NSApp mainMenu] itemWithTitle:@"File"] submenu] retain]) {
 		originalSaveMenuItem = [fileMenu itemWithTitle:@"Save"];
+		[originalSaveMenuItem setKeyEquivalentModifierMask:[originalSaveMenuItem keyEquivalentModifierMask] | NSAlternateKeyMask | NSShiftKeyMask];
+
 		saveMenuItem = [fileMenu insertItemWithTitle:@"Clean'n'Save"
 																					action:@selector(cleanNSaveAction:)
 																	 keyEquivalent:[originalSaveMenuItem keyEquivalent]
 																				 atIndex:[fileMenu indexOfItem:originalSaveMenuItem] + 1];
 		[saveMenuItem setTarget:self];
-		
-		[originalSaveMenuItem setKeyEquivalent:@""];
 	}
 }
 
