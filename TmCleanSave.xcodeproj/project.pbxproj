@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		177E4DA309132A0F0064163D /* TmCleanSave.mm in Sources */ = {isa = PBXBuildFile; fileRef = 177E4DA209132A0F0064163D /* TmCleanSave.mm */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		B282846312D3B0CE00BB481A /* NSObject+Inspect.mm in Sources */ = {isa = PBXBuildFile; fileRef = B282846212D3B0CE00BB481A /* NSObject+Inspect.mm */; };
+		B282878B12D511ED00BB481A /* OnigRegexp.m in Sources */ = {isa = PBXBuildFile; fileRef = B282877212D511ED00BB481A /* OnigRegexp.m */; };
+		B282878C12D511ED00BB481A /* OnigRegexpUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = B282877412D511ED00BB481A /* OnigRegexpUtility.m */; };
+		B282878D12D511ED00BB481A /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = B282877712D511ED00BB481A /* COPYING */; };
+		B282878E12D511ED00BB481A /* ascii.c in Sources */ = {isa = PBXBuildFile; fileRef = B282877912D511ED00BB481A /* ascii.c */; };
+		B282878F12D511ED00BB481A /* unicode.c in Sources */ = {isa = PBXBuildFile; fileRef = B282877A12D511ED00BB481A /* unicode.c */; };
+		B282879012D511ED00BB481A /* utf16_le.c in Sources */ = {isa = PBXBuildFile; fileRef = B282877B12D511ED00BB481A /* utf16_le.c */; };
+		B282879112D511ED00BB481A /* regcomp.c in Sources */ = {isa = PBXBuildFile; fileRef = B282877D12D511ED00BB481A /* regcomp.c */; };
+		B282879212D511ED00BB481A /* regenc.c in Sources */ = {isa = PBXBuildFile; fileRef = B282877E12D511ED00BB481A /* regenc.c */; };
+		B282879312D511ED00BB481A /* regerror.c in Sources */ = {isa = PBXBuildFile; fileRef = B282878012D511ED00BB481A /* regerror.c */; };
+		B282879412D511ED00BB481A /* regexec.c in Sources */ = {isa = PBXBuildFile; fileRef = B282878112D511ED00BB481A /* regexec.c */; };
+		B282879512D511ED00BB481A /* regext.c in Sources */ = {isa = PBXBuildFile; fileRef = B282878212D511ED00BB481A /* regext.c */; };
+		B282879612D511ED00BB481A /* regparse.c in Sources */ = {isa = PBXBuildFile; fileRef = B282878412D511ED00BB481A /* regparse.c */; };
+		B282879712D511ED00BB481A /* regsyntax.c in Sources */ = {isa = PBXBuildFile; fileRef = B282878612D511ED00BB481A /* regsyntax.c */; };
+		B282879812D511ED00BB481A /* regtrav.c in Sources */ = {isa = PBXBuildFile; fileRef = B282878712D511ED00BB481A /* regtrav.c */; };
+		B282879912D511ED00BB481A /* regversion.c in Sources */ = {isa = PBXBuildFile; fileRef = B282878812D511ED00BB481A /* regversion.c */; };
+		B282879A12D511ED00BB481A /* st.c in Sources */ = {isa = PBXBuildFile; fileRef = B282878912D511ED00BB481A /* st.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC7A56F51098955D00E77731 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		177E4DA109132A0F0064163D /* TmCleanSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmCleanSave.h; sourceTree = "<group>"; };
+		177E4DA209132A0F0064163D /* TmCleanSave.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TmCleanSave.mm; sourceTree = "<group>"; };
+		32DBCF630370AF2F00C91783 /* TmCleanSave_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmCleanSave_Prefix.pch; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* TmCleanSave.tmplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TmCleanSave.tmplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B282846112D3B0CE00BB481A /* NSObject+Inspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Inspect.h"; sourceTree = "<group>"; };
+		B282846212D3B0CE00BB481A /* NSObject+Inspect.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSObject+Inspect.mm"; sourceTree = "<group>"; };
+		B282877112D511ED00BB481A /* OnigRegexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnigRegexp.h; sourceTree = "<group>"; };
+		B282877212D511ED00BB481A /* OnigRegexp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnigRegexp.m; sourceTree = "<group>"; };
+		B282877312D511ED00BB481A /* OnigRegexpUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnigRegexpUtility.h; sourceTree = "<group>"; };
+		B282877412D511ED00BB481A /* OnigRegexpUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnigRegexpUtility.m; sourceTree = "<group>"; };
+		B282877612D511ED00BB481A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		B282877712D511ED00BB481A /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		B282877912D511ED00BB481A /* ascii.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ascii.c; sourceTree = "<group>"; };
+		B282877A12D511ED00BB481A /* unicode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unicode.c; sourceTree = "<group>"; };
+		B282877B12D511ED00BB481A /* utf16_le.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utf16_le.c; sourceTree = "<group>"; };
+		B282877C12D511ED00BB481A /* oniguruma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oniguruma.h; sourceTree = "<group>"; };
+		B282877D12D511ED00BB481A /* regcomp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regcomp.c; sourceTree = "<group>"; };
+		B282877E12D511ED00BB481A /* regenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regenc.c; sourceTree = "<group>"; };
+		B282877F12D511ED00BB481A /* regenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regenc.h; sourceTree = "<group>"; };
+		B282878012D511ED00BB481A /* regerror.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regerror.c; sourceTree = "<group>"; };
+		B282878112D511ED00BB481A /* regexec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regexec.c; sourceTree = "<group>"; };
+		B282878212D511ED00BB481A /* regext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regext.c; sourceTree = "<group>"; };
+		B282878312D511ED00BB481A /* regint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regint.h; sourceTree = "<group>"; };
+		B282878412D511ED00BB481A /* regparse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regparse.c; sourceTree = "<group>"; };
+		B282878512D511ED00BB481A /* regparse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regparse.h; sourceTree = "<group>"; };
+		B282878612D511ED00BB481A /* regsyntax.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regsyntax.c; sourceTree = "<group>"; };
+		B282878712D511ED00BB481A /* regtrav.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regtrav.c; sourceTree = "<group>"; };
+		B282878812D511ED00BB481A /* regversion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regversion.c; sourceTree = "<group>"; };
+		B282878912D511ED00BB481A /* st.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = st.c; sourceTree = "<group>"; };
+		B282878A12D511ED00BB481A /* st.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st.h; sourceTree = "<group>"; };
+		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = Clock;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				177E4DA209132A0F0064163D /* TmCleanSave.mm */,
+				177E4DA109132A0F0064163D /* TmCleanSave.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* TmCleanSave.tmplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B282877012D511ED00BB481A /* CocoaOniguruma */,
+				32DBCF630370AF2F00C91783 /* TmCleanSave_Prefix.pch */,
+				B282846112D3B0CE00BB481A /* NSObject+Inspect.h */,
+				B282846212D3B0CE00BB481A /* NSObject+Inspect.mm */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		B282877012D511ED00BB481A /* CocoaOniguruma */ = {
+			isa = PBXGroup;
+			children = (
+				B282877112D511ED00BB481A /* OnigRegexp.h */,
+				B282877212D511ED00BB481A /* OnigRegexp.m */,
+				B282877312D511ED00BB481A /* OnigRegexpUtility.h */,
+				B282877412D511ED00BB481A /* OnigRegexpUtility.m */,
+				B282877512D511ED00BB481A /* oniguruma */,
+			);
+			path = CocoaOniguruma;
+			sourceTree = "<group>";
+		};
+		B282877512D511ED00BB481A /* oniguruma */ = {
+			isa = PBXGroup;
+			children = (
+				B282877612D511ED00BB481A /* config.h */,
+				B282877712D511ED00BB481A /* COPYING */,
+				B282877812D511ED00BB481A /* enc */,
+				B282877C12D511ED00BB481A /* oniguruma.h */,
+				B282877D12D511ED00BB481A /* regcomp.c */,
+				B282877E12D511ED00BB481A /* regenc.c */,
+				B282877F12D511ED00BB481A /* regenc.h */,
+				B282878012D511ED00BB481A /* regerror.c */,
+				B282878112D511ED00BB481A /* regexec.c */,
+				B282878212D511ED00BB481A /* regext.c */,
+				B282878312D511ED00BB481A /* regint.h */,
+				B282878412D511ED00BB481A /* regparse.c */,
+				B282878512D511ED00BB481A /* regparse.h */,
+				B282878612D511ED00BB481A /* regsyntax.c */,
+				B282878712D511ED00BB481A /* regtrav.c */,
+				B282878812D511ED00BB481A /* regversion.c */,
+				B282878912D511ED00BB481A /* st.c */,
+				B282878A12D511ED00BB481A /* st.h */,
+			);
+			path = oniguruma;
+			sourceTree = "<group>";
+		};
+		B282877812D511ED00BB481A /* enc */ = {
+			isa = PBXGroup;
+			children = (
+				B282877912D511ED00BB481A /* ascii.c */,
+				B282877A12D511ED00BB481A /* unicode.c */,
+				B282877B12D511ED00BB481A /* utf16_le.c */,
+			);
+			path = enc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* TmCleanSave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "TmCleanSave" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+				177E4DB50913322B0064163D /* ShellScript */,
+				BC7A56F51098955D00E77731 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TmCleanSave;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = Clock;
+			productReference = 8D5B49B6048680CD000E48DA /* TmCleanSave.tmplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = tadump;
+			};
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "TmCleanSave" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* Clock */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* TmCleanSave */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				B282878D12D511ED00BB481A /* COPYING in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		177E4DB50913322B0064163D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"$HOME/Library/Application Support/TextMate/PlugIns\"\ncp -pR \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"$HOME/Library/Application Support/TextMate/PlugIns\"\ntouch \"$HOME/Library/Application Support/TextMate/PlugIns/${FULL_PRODUCT_NAME}\"\nosascript -e 'quit application \"TextMate\"'\nopen '/Applications/TextMate.app'";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				177E4DA309132A0F0064163D /* TmCleanSave.mm in Sources */,
+				B282846312D3B0CE00BB481A /* NSObject+Inspect.mm in Sources */,
+				B282878B12D511ED00BB481A /* OnigRegexp.m in Sources */,
+				B282878C12D511ED00BB481A /* OnigRegexpUtility.m in Sources */,
+				B282878E12D511ED00BB481A /* ascii.c in Sources */,
+				B282878F12D511ED00BB481A /* unicode.c in Sources */,
+				B282879012D511ED00BB481A /* utf16_le.c in Sources */,
+				B282879112D511ED00BB481A /* regcomp.c in Sources */,
+				B282879212D511ED00BB481A /* regenc.c in Sources */,
+				B282879312D511ED00BB481A /* regerror.c in Sources */,
+				B282879412D511ED00BB481A /* regexec.c in Sources */,
+				B282879512D511ED00BB481A /* regext.c in Sources */,
+				B282879612D511ED00BB481A /* regparse.c in Sources */,
+				B282879712D511ED00BB481A /* regsyntax.c in Sources */,
+				B282879812D511ED00BB481A /* regtrav.c in Sources */,
+				B282879912D511ED00BB481A /* regversion.c in Sources */,
+				B282879A12D511ED00BB481A /* st.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TmCleanSave_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = TmCleanSave;
+				WRAPPER_EXTENSION = tmplugin;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TmCleanSave_Prefix.pch;
+				IBC_STRIP_NIBS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = TmCleanSave;
+				WRAPPER_EXTENSION = tmplugin;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "TmCleanSave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "TmCleanSave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
