@@ -56,7 +56,7 @@
 		int columnIndex = [[envVars objectForKey:@"TM_COLUMN_NUMBER"] intValue] - 1;
 		BOOL softTab = [view softTabs];
 		unsigned long tabSize = [view tabSize];
-		NSString *spaceTab = [@"" stringByPaddingToLength:tabSize withString: @"    " startingAtIndex:0];
+		NSString *spaceTab = [@" " repeatTimes:tabSize];
 		NSString *tab = softTab ? spaceTab : @"\t";
 
 		NSMutableString *data = [NSString stringWithContentsOfFile:filename encoding:encoding error:NULL];

@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NSObject+Inspect.h"
+#import "NSString+Repeat.h"
 #import "OnigRegexp.h"
 
 @protocol TMPlugInController
