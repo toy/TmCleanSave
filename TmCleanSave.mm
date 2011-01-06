@@ -12,11 +12,6 @@
 
 - (id)initWithPlugInController:(id <TMPlugInController>)aController{
 	if(self = [super init]) {
-//		Class oakDocument = NSClassFromString(@"OakDocument");
-//		method_exchangeImplementations(
-//																	 class_getInstanceMethod(oakDocument, @selector(writeToFile:)),
-//																	 class_getInstanceMethod(oakDocument, @selector(cleanAndWriteToFile:))
-//																	 );
 		[self installMenuItem];
 	}
 	return self;
@@ -111,36 +106,6 @@
 	} else {
 		NSBeep();
 	}
-
-//	[fileMenu update];
-//	if ([originalSaveMenuItem isEnabled]) {
-//		id textView = [NSApp targetForAction:@selector(document)];
-//		id document = [textView document];
-////		NSLog(@"<<<");
-////		NSLog(@"saved: %@", ![document isDocumentEdited] ? @"Y" : @"N");
-////		[fileMenu performActionForItemAtIndex:[fileMenu indexOfItem:originalSaveMenuItem]];
-////		NSLog(@"saved: %@", ![document isDocumentEdited] ? @"Y" : @"N");
-////		NSLog(@">>>");
-//		
-////		[textView inspectTill:[NSView class]];
-//		NSLog(@"%@", [document filename]);
-//		[document reopenWithEncoding:[document fileEncoding]];
-////		NSLog(@"%@", [textView textStorage]);
-////		[textView replaceAll:@"arst"];
-////		NSLog(@"%@", [textView textStorage]);
-////		NSString *text = [textView textStorage];
-////		NSLog(@"%@", [text class]);
-////		if (document)
-//
-////		NSLog(@"%@ %@", document, document);
-////		NSLog(@"%@", [[textView document] checkForFilesystemChanges] ? @"Y" : @"N");
-////		NSLog(@"%@", [[textView class] superclass]);
-//
-////		NSLog(@"%@", [textView stringValue]);
-////		[curDocument replaceAll:@"arsitnrast"];
-//
-//		
-//	}
 }
 
 @end

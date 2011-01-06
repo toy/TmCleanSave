@@ -52,11 +52,3 @@
 - (void)setFileModificationDate:(id)date;
 - (BOOL)checkForFilesystemChanges;
 @end
-
-//#define OakCallbackStack NSClassFromString(@"OakCallbackStack")
-//
-//@interface OakDocument : NSObject
-//@end
-//@interface OakDocument (CleanSave)
-//- (BOOL)cleanFile;
-//@end
