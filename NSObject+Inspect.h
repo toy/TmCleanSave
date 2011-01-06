@@ -6,6 +6,8 @@
 //  Copyright 2011 tadump. All rights reserved.
 //
 
+#ifndef NDEBUG
+
 #import <Cocoa/Cocoa.h>
 #import <objc/objc-class.h>
 
@@ -88,3 +90,5 @@
 }
 
 @end
+
+#endif
