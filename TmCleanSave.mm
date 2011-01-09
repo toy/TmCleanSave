@@ -118,7 +118,7 @@
 	}
 }
 
-- (NSUInteger)countTabs:(NSString *)string withTabSize:(NSUInteger)tabSize {
+- (NSUInteger)countColumns:(NSString *)string withTabSize:(NSUInteger)tabSize {
 	NSUInteger col = 0;
 	NSUInteger s, _s = [string length];
 	for (s = 0; s < _s; s++) { unichar character = [string characterAtIndex:s];
@@ -128,7 +128,11 @@
 			col++;
 		}
 	}
-	return roundf((float)col / tabSize);
+	return col;
+}
+
+- (NSUInteger)countTabs:(NSString *)string withTabSize:(NSUInteger)tabSize {
+	return roundf((float)[self countColumns:string withTabSize:tabSize] / tabSize);
 }
 
 @end
