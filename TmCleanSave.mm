@@ -50,7 +50,7 @@
 	[controller saveDocument:sender];
 	NSString *filename = [document filename];
 	if (filename) {
-		int encoding = [document fileEncoding];
+		NSStringEncoding encoding = [document fileEncoding];
 		NSDictionary* envVars = [view allEnvironmentVariables];
 		int lineIndex = [[envVars objectForKey:@"TM_LINE_NUMBER"] intValue] - 1;
 		int columnIndex = [[envVars objectForKey:@"TM_COLUMN_NUMBER"] intValue] - 1;
