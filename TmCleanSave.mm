@@ -78,21 +78,6 @@
 		NSUInteger eatenLines = 0;
 		for (i = 0; i < _i; i++) { NSString *line = [lines objectAtIndex:i];
 			OnigResult *match = [nonSpaceReg search:line];
-			NSString *spaces = [match preMatch];
-			if (spaces && [spaces length] > 0) {
-				NSUInteger col = 0;
-				NSUInteger s, _s = [spaces length];
-				for (s = 0; s < _s; s++) { unichar space = [spaces characterAtIndex:s];
-					if (space == '\t') {
-						col = (col / tabSize + 1) * tabSize;
-					} else {
-						col++;
-					}
-				}
-				spaces = [tab repeatTimes:roundf(col / (float)tabSize)];
-			} else {
-				spaces = @"";
-			}
 
 			NSString *body = [match body];
 			if (!body) {
@@ -103,6 +88,13 @@
 //			} else {
 //				line = [line replaceByRegexp:rightSpaceReg with:@""];
 //			}
+			NSString *spaces = [match preMatch];
+			if (spaces && [spaces length] > 0) {
+				spaces = [tab repeatTimes:[self countTabs:spaces withTabSize:tabSize]];
+			} else {
+				spaces = @"";
+			}
+
 			if (eatingLines && [line length] == 0) {
 				eatenLines++;
 			} else {
