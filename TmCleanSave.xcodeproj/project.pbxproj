@@ -26,6 +26,7 @@
 		B282879812D511ED00BB481A /* regtrav.c in Sources */ = {isa = PBXBuildFile; fileRef = B282878712D511ED00BB481A /* regtrav.c */; };
 		B282879912D511ED00BB481A /* regversion.c in Sources */ = {isa = PBXBuildFile; fileRef = B282878812D511ED00BB481A /* regversion.c */; };
 		B282879A12D511ED00BB481A /* st.c in Sources */ = {isa = PBXBuildFile; fileRef = B282878912D511ED00BB481A /* st.c */; };
+		B2FAFCA712D67934009311C3 /* NSString+Repeat.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FAFCA612D67934009311C3 /* NSString+Repeat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +76,8 @@
 		B282878812D511ED00BB481A /* regversion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regversion.c; sourceTree = "<group>"; };
 		B282878912D511ED00BB481A /* st.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = st.c; sourceTree = "<group>"; };
 		B282878A12D511ED00BB481A /* st.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st.h; sourceTree = "<group>"; };
+		B2FAFCA512D67934009311C3 /* NSString+Repeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Repeat.h"; sourceTree = "<group>"; };
+		B2FAFCA612D67934009311C3 /* NSString+Repeat.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = "NSString+Repeat.m"; sourceTree = "<group>"; tabWidth = 2; usesTabs = 1; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +164,8 @@
 				B282877012D511ED00BB481A /* CocoaOniguruma */,
 				32DBCF630370AF2F00C91783 /* TmCleanSave_Prefix.pch */,
 				B282846112D3B0CE00BB481A /* NSObject+Inspect.h */,
+				B2FAFCA512D67934009311C3 /* NSString+Repeat.h */,
+				B2FAFCA612D67934009311C3 /* NSString+Repeat.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -279,7 +284,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"$HOME/Library/Application Support/TextMate/PlugIns\"\ncp -pR \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"$HOME/Library/Application Support/TextMate/PlugIns\"\ntouch \"$HOME/Library/Application Support/TextMate/PlugIns/${FULL_PRODUCT_NAME}\"\nosascript -e 'quit application \"TextMate\"'\nopen '/Applications/TextMate.app'";
+			shellScript = "mkdir -p \"$HOME/Library/Application Support/TextMate/PlugIns\"\ncp -pR \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"$HOME/Library/Application Support/TextMate/PlugIns\"\ntouch \"$HOME/Library/Application Support/TextMate/PlugIns/${FULL_PRODUCT_NAME}\"\nosascript -e 'quit application \"TextMate\"' || true\nopen '/Applications/TextMate.app'";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -304,6 +309,7 @@
 				B282879812D511ED00BB481A /* regtrav.c in Sources */,
 				B282879912D511ED00BB481A /* regversion.c in Sources */,
 				B282879A12D511ED00BB481A /* st.c in Sources */,
+				B2FAFCA712D67934009311C3 /* NSString+Repeat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
