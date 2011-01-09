@@ -84,10 +84,6 @@
 				body = @"";
 			}
 
-//			if (i == lineIndex) {
-//			} else {
-//				line = [line replaceByRegexp:rightSpaceReg with:@""];
-//			}
 			NSString *spaces = [match preMatch];
 			if (spaces && [spaces length] > 0) {
 				spaces = [tab repeatTimes:[self countTabs:spaces withTabSize:tabSize]];
@@ -99,7 +95,15 @@
 				eatenLines++;
 			} else {
 				eatingLines = false;
-				[data appendFormat:@"%@%@\n", spaces, body];
+				line = [NSString stringWithFormat:@"%@%@", spaces, body];
+				if (i == lineIndex) {
+					NSUInteger lineColumns = [self countColumns:line withTabSize:tabSize];
+					if (lineColumns < columnIndex) {
+						[@"" stringByPaddingToLength: withString:[] startingAtIndex:];
+						line = [line stringByAppendingString:[@" " repeatTimes:columnIndex - lineColumns]];
+					}
+				}
+				[data appendFormat:@"%@\n", line];
 			}
 		}
 
