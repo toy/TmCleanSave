@@ -58,14 +58,19 @@
 		unsigned long tabSize = [view tabSize];
 		NSString *spaceTab = [@" " repeatTimes:tabSize];
 		NSString *tab = softTab ? spaceTab : @"\t";
+		NSMutableString *data;
+		NSError *error;
 
-		NSMutableString *data = [NSString stringWithContentsOfFile:filename encoding:encoding error:NULL];
+		data = [NSString stringWithContentsOfFile:filename usedEncoding:&encoding error:&error];
+		if (data == nil) {
+			data = [NSString stringWithContentsOfFile:filename encoding:encoding error:&error];
+		}
 
 		OnigRegexp *rightSpaceReg = [OnigRegexp compile:@"\\s*\\Z" ignorecase:true multiline:true];
 		OnigRegexp *nonSpaceReg = [OnigRegexp compileIgnorecase:@"\\S+(\\s+\\S+)*"];
 
 		data = [data replaceByRegexp:rightSpaceReg with:@""];
-		
+
 		NSArray *lines = [data componentsSeparatedByString:@"\n"];
 		data = [NSMutableString stringWithCapacity:[data length]];
 		NSUInteger i, _i = [lines count];
@@ -106,7 +111,11 @@
 			}
 		}
 
-		[data writeToFile:filename atomically:FALSE encoding:encoding error:NULL];
+		if (![data writeToFile:filename atomically:FALSE encoding:encoding error:&error]) {
+			if (![data writeToFile:filename atomically:FALSE encoding:NSUTF8StringEncoding error:&error]) {
+				NSLog(@"%@", error);
+			}
+		}
 
 		[document setFileModificationDate:[NSDate distantPast]];
 		[document checkForFilesystemChanges];
