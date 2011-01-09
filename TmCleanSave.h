@@ -32,6 +32,8 @@
 
 - (void)cleanNSaveAction:(id)sender;
 
+- (NSUInteger)countTabs:(NSString *)string withTabSize:(NSUInteger)tabSize;
+
 @end
 
 @interface OakController : NSWindowController

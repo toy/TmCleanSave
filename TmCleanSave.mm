@@ -117,4 +117,17 @@
 	}
 }
 
+- (NSUInteger)countTabs:(NSString *)string withTabSize:(NSUInteger)tabSize {
+	NSUInteger col = 0;
+	NSUInteger s, _s = [string length];
+	for (s = 0; s < _s; s++) { unichar character = [string characterAtIndex:s];
+		if (character == '\t') {
+			col = (col / tabSize + 1) * tabSize;
+		} else {
+			col++;
+		}
+	}
+	return roundf((float)col / tabSize);
+}
+
 @end
