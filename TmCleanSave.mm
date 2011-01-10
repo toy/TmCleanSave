@@ -80,20 +80,17 @@
 			OnigResult *match = [nonSpaceReg search:line];
 			NSString *body = [match body];
 
-			if (eatingLines && !body) {
+			if (!body) {
 				if (i == lineIndex) {
 					[data appendString:[tab repeatTimes:[self columnsToTabs:columnIndex withTabSize:tabSize]]];
-				} else {
+				} else
+				if (eatingLines) {
 					eatenLines++;
 					continue;
 				}
 			} else {
 				eatingLines = false;
-				if (body) {
-					[data appendFormat:@"%@%@", [tab repeatTimes:[self stringTabCount:[match preMatch] withTabSize:tabSize]], body];
-				} else if (i == lineIndex) {
-					[data appendString:[tab repeatTimes:[self columnsToTabs:columnIndex withTabSize:tabSize]]];
-				}
+				[data appendFormat:@"%@%@", [tab repeatTimes:[self stringTabCount:[match preMatch] withTabSize:tabSize]], body];
 			}
 			[data appendString:@"\n"];
 		}
