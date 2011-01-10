@@ -81,9 +81,9 @@
 			NSString *body = [match body];
 
 			if (!body) {
-				if (i == lineIndex) {
-					[data appendString:[tab repeatTimes:[self columnsToTabs:columnIndex withTabSize:tabSize]]];
-				} else
+//				if (i == lineIndex) {
+//					[data appendString:[tab repeatTimes:[self columnsToTabs:columnIndex withTabSize:tabSize]]];
+//				} else
 				if (eatingLines) {
 					eatenLines++;
 					continue;
