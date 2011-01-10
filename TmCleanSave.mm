@@ -78,33 +78,24 @@
 		NSUInteger eatenLines = 0;
 		for (i = 0; i < _i; i++) { NSString *line = [lines objectAtIndex:i];
 			OnigResult *match = [nonSpaceReg search:line];
-
 			NSString *body = [match body];
-			if (!body) {
-				body = @"";
-			}
 
-			NSString *spaces = [match preMatch];
-			if (spaces && [spaces length] > 0) {
-				spaces = [tab repeatTimes:[self countTabs:spaces withTabSize:tabSize]];
-			} else {
-				spaces = @"";
-			}
-
-			if (eatingLines && [line length] == 0) {
-				eatenLines++;
+			if (eatingLines && !body) {
+				if (i == lineIndex) {
+					[data appendString:[tab repeatTimes:[self columnsToTabs:columnIndex withTabSize:tabSize]]];
+				} else {
+					eatenLines++;
+					continue;
+				}
 			} else {
 				eatingLines = false;
-				line = [NSString stringWithFormat:@"%@%@", spaces, body];
-				if (i == lineIndex) {
-					NSUInteger lineColumns = [self countColumns:line withTabSize:tabSize];
-					if (lineColumns < columnIndex) {
-						[@"" stringByPaddingToLength: withString:[] startingAtIndex:];
-						line = [line stringByAppendingString:[@" " repeatTimes:columnIndex - lineColumns]];
-					}
+				if (body) {
+					[data appendFormat:@"%@%@", [tab repeatTimes:[self stringTabCount:[match preMatch] withTabSize:tabSize]], body];
+				} else if (i == lineIndex) {
+					[data appendString:[tab repeatTimes:[self columnsToTabs:columnIndex withTabSize:tabSize]]];
 				}
-				[data appendFormat:@"%@\n", line];
 			}
+			[data appendString:@"\n"];
 		}
 
 		if (![data writeToFile:filename atomically:FALSE encoding:encoding error:&error]) {
@@ -122,21 +113,25 @@
 	}
 }
 
-- (NSUInteger)countColumns:(NSString *)string withTabSize:(NSUInteger)tabSize {
-	NSUInteger col = 0;
+- (NSUInteger)stringColumnCount:(NSString *)string withTabSize:(NSUInteger)tabSize {
+	NSUInteger column = 0;
 	NSUInteger s, _s = [string length];
 	for (s = 0; s < _s; s++) { unichar character = [string characterAtIndex:s];
 		if (character == '\t') {
-			col = (col / tabSize + 1) * tabSize;
+			column = (column / tabSize + 1) * tabSize;
 		} else {
-			col++;
+			column++;
 		}
 	}
-	return col;
+	return column;
 }
 
-- (NSUInteger)countTabs:(NSString *)string withTabSize:(NSUInteger)tabSize {
-	return roundf((float)[self countColumns:string withTabSize:tabSize] / tabSize);
+- (NSUInteger)stringTabCount:(NSString *)string withTabSize:(NSUInteger)tabSize {
+	return [self columnsToTabs:[self stringColumnCount:string withTabSize:tabSize] withTabSize:tabSize];
+}
+
+- (NSUInteger)columnsToTabs:(NSUInteger)column withTabSize:(NSUInteger)tabSize {
+	return (NSUInteger)roundf((float)column / tabSize);
 }
 
 @end

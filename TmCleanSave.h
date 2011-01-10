@@ -32,8 +32,9 @@
 
 - (void)cleanNSaveAction:(id)sender;
 
-- (NSUInteger)countColumns:(NSString *)string withTabSize:(NSUInteger)tabSize;
-- (NSUInteger)countTabs:(NSString *)string withTabSize:(NSUInteger)tabSize;
+- (NSUInteger)stringColumnCount:(NSString *)string withTabSize:(NSUInteger)tabSize;
+- (NSUInteger)stringTabCount:(NSString *)string withTabSize:(NSUInteger)tabSize;
+- (NSUInteger)columnsToTabs:(NSUInteger)column withTabSize:(NSUInteger)tabSize;
 
 @end
 
