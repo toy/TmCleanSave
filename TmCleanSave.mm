@@ -90,7 +90,11 @@
 				}
 			} else {
 				eatingLines = false;
-				[data appendFormat:@"%@%@", [tab repeatTimes:[self stringTabCount:[match preMatch] withTabSize:tabSize]], body];
+				NSUInteger tabCount = [self stringTabCount:[match preMatch] withTabSize:tabSize];
+				[data appendFormat:@"%@%@", [tab repeatTimes:tabCount], body];
+				if (i == lineIndex && !softTab) {
+					columnIndex = columnIndex - MIN(tabCount, [self columnsToTabs:columnIndex withTabSize:tabSize]) * (tabSize - 1);
+				}
 			}
 			[data appendString:@"\n"];
 		}
@@ -105,6 +109,7 @@
 		[document checkForFilesystemChanges];
 		[view goToLineNumber:[NSNumber numberWithInt:lineIndex + 1 - eatenLines]];
 		[view goToColumnNumber:[NSNumber numberWithInt:columnIndex + 1]];
+		[view recalcFrameSize];
 	} else {
 		NSBeep();
 	}

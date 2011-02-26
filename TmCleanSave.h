@@ -49,6 +49,7 @@
 - (id)allEnvironmentVariables;
 - (void)goToLineNumber:(id)lineNumber;
 - (void)goToColumnNumber:(id)columnNumber;
+- (void)recalcFrameSize;
 @end
 
 @interface OakDocument
