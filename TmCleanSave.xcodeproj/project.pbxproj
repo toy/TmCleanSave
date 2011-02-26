@@ -250,7 +250,11 @@
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "TmCleanSave" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* Clock */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,6 +344,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = TmCleanSave;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = tmplugin;
 				ZERO_LINK = YES;
 			};
@@ -360,6 +365,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = TmCleanSave;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = tmplugin;
 			};
 			name = Release;
