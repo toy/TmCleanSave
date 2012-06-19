@@ -71,11 +71,12 @@
 		NSArray *lines = [data componentsSeparatedByString:@"\n"];
 		data = [NSMutableString stringWithCapacity:[data length]];
 		NSUInteger i, _i = [lines count];
-		BOOL eatingLines = true;
-		NSUInteger eatenLines = 0;
+		BOOL eatingLines = true, comment = false;
+		NSUInteger eatenLines = 0, commentTabCount;
 		for (i = 0; i < _i; i++) { NSString *line = [lines objectAtIndex:i];
 			OnigResult *match = [nonSpaceReg search:line];
 			NSString *body = [match body];
+			NSString *preMatch = [match preMatch];
 
 			if (!body) {
 				if (eatingLines) {
@@ -84,7 +85,18 @@
 				}
 			} else {
 				eatingLines = false;
-				NSUInteger tabCount = [self stringTabCount:[match preMatch] withTabSize:tabSize];
+				NSUInteger tabCount = [self stringTabCount:preMatch withTabSize:tabSize];
+				if (comment && [body hasPrefix:@"*"]) {
+					if ([body hasPrefix:@"*"]) {
+						body = [NSString stringWithFormat:@" %@", body];
+						tabCount = commentTabCount;
+					}
+				} else {
+					if ([body hasPrefix:@"/*"]) {
+						comment = true;
+						commentTabCount = tabCount;
+					}
+				}
 				[data appendFormat:@"%@%@", [tab repeatTimes:tabCount], body];
 				if (i == lineIndex && !softTab) {
 					columnIndex = columnIndex - MIN(tabCount, [self columnsToTabs:columnIndex withTabSize:tabSize]) * (tabSize - 1);
