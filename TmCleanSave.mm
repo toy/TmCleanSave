@@ -27,10 +27,7 @@
 		originalSaveMenuItem = [fileMenu itemWithTitle:@"Save"];
 		[originalSaveMenuItem setKeyEquivalentModifierMask:[originalSaveMenuItem keyEquivalentModifierMask] | NSAlternateKeyMask | NSShiftKeyMask];
 
-		saveMenuItem = [fileMenu insertItemWithTitle:@"Clean'n'Save"
-																					action:@selector(cleanNSaveAction:)
-																	 keyEquivalent:[originalSaveMenuItem keyEquivalent]
-																				 atIndex:[fileMenu indexOfItem:originalSaveMenuItem] + 1];
+		saveMenuItem = [fileMenu insertItemWithTitle:@"Clean'n'Save" action:@selector(cleanNSaveAction:) keyEquivalent:[originalSaveMenuItem keyEquivalent] atIndex:[fileMenu indexOfItem:originalSaveMenuItem] + 1];
 		[saveMenuItem setTarget:self];
 	}
 }
@@ -81,9 +78,6 @@
 			NSString *body = [match body];
 
 			if (!body) {
-//				if (i == lineIndex) {
-//					[data appendString:[tab repeatTimes:[self columnsToTabs:columnIndex withTabSize:tabSize]]];
-//				} else
 				if (eatingLines) {
 					eatenLines++;
 					continue;
