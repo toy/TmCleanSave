@@ -95,6 +95,8 @@
 					if ([body hasPrefix:@"/*"]) {
 						comment = true;
 						commentTabCount = tabCount;
+					} else {
+						comment = false;
 					}
 				}
 				[data appendFormat:@"%@%@", [tab repeatTimes:tabCount], body];
